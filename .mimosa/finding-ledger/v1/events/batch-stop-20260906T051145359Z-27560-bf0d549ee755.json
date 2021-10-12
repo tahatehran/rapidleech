@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "mimosa-finding-ledger-batch/v1",
+  "batchId": "stop-20260906T051145359Z-27560-bf0d549ee755",
+  "runId": "20260906T051145359Z-27560-bf0d549ee755",
+  "runStatus": "inconclusive",
+  "coverage": {
+    "status": "partial",
+    "reasons": [
+      {
+        "code": "baseline_partial",
+        "stage": "baseline",
+        "target": ".",
+        "detail": "baseline capture had enumeration or snapshot errors",
+        "affectsCompletion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "baseline",
+        "target": ".",
+        "detail": "baseline_partial: baseline capture had enumeration or snapshot errors",
+        "affectsCompletion": true
+      }
+    ]
+  },
+  "source": {
+    "component": "zcode-hook",
+    "operationId": "Stop"
+  },
+  "revision": "28bfdc5d3d6cb43f145955c5bacde24b9d0caed8",
+  "diffHash": "8516cf1f0f68be4c848fcbe68118ae897733396be3ed1024f84b4e4c26205268",
+  "rulesVersion": "unavailable",
+  "sessionHash": "8684343c655d7f5a204b66c0051774c2d47c6e7ece38941b51bc89349de464e9",
+  "reportRef": ".mimosa/reports/task-review-sess_93bc00a7-2160-4458-b611-a5a9427c7160-20260906T051145359Z-27560-bf0d549ee755.json",
+  "events": [],
+  "observedFindingIds": [],
+  "verifiedFiles": [
+    {
+      "file": "templates/plugmod/header.php",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "templates/plugmod/footer.php",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "templates/plugmod/main.php",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "templates/plugmod/sinfo.php",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "classes/sinfo.php",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "classes/ajax_refresh.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "checker.php",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "configs/setup.php",
+      "direct": "complete",
+      "projectContext": "partial"
+    }
+  ],
+  "recordedAt": "2026-09-06T05:11:46.212Z"
+}

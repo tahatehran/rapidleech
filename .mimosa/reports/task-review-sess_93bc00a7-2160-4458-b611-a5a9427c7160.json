@@ -1,0 +1,815 @@
+{
+  "schema_version": "mimosa-task-review/v2",
+  "run_id": "20260906T055618693Z-5428-ada8b691e4d4",
+  "run_status": "inconclusive",
+  "errors": [
+    {
+      "stage": "candidate-select",
+      "target": "hosts/upload/uploaded.net_member.php",
+      "reason": "candidate_limit_exceeded: 4 changed reviewable file(s) were not scanned because the limit is 20"
+    },
+    {
+      "stage": "scan",
+      "target": "classes/rar.php",
+      "reason": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "hosts/download/depfile_com.php",
+      "reason": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "hosts/download/depositfiles_com.php",
+      "reason": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "hosts/download/fileboom_me.php",
+      "reason": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "hosts/download/keep2share_cc.php",
+      "reason": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "hosts/download/hitfile_net.php",
+      "reason": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "hosts/download/letitbit_net.php",
+      "reason": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "hosts/download/nitroflare_com.php",
+      "reason": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "hosts/download/turbobit_net.php",
+      "reason": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "hosts/download/uploaded_net.php",
+      "reason": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "hosts/download/GenericXFS_DL.php",
+      "reason": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "hosts/download/mega_co_nz.php",
+      "reason": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "hosts/download/rapidgator_net.php",
+      "reason": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "hosts/download/youtube_com.php",
+      "reason": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "hosts/upload/fshare.vn_member.php",
+      "reason": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "hosts/upload/keep2share.cc_member.php",
+      "reason": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "hosts/upload/depositfiles.com_member.php",
+      "reason": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "hosts/upload/mega.co.nz_member.php",
+      "reason": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "hosts/upload/filejoker.net_member.php",
+      "reason": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "hosts/upload/letitbit.net_member.php",
+      "reason": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT"
+    }
+  ],
+  "coverage": {
+    "schema_version": "mimosa-hook-coverage/v1",
+    "status": "partial",
+    "scope": "hook_observed_diff",
+    "baseline": {
+      "complete": true,
+      "captured_files": 455,
+      "candidate_limit": 5000,
+      "truncated": false,
+      "enumeration_error_count": 0,
+      "snapshot_error_count": 0,
+      "compensated_target_count": 24
+    },
+    "change_tracking": {
+      "touched_observed": 24,
+      "touched_retained": 24,
+      "truncated": false,
+      "bash_mutation": true,
+      "bash_discovered": 24,
+      "bash_discovery_limit": 80,
+      "bash_discovery_truncated": false
+    },
+    "candidates": {
+      "eligible_files": 24,
+      "selected_files": 20,
+      "limit": 20,
+      "truncated": true
+    },
+    "scanning": {
+      "required_files": 20,
+      "scanned_files": 0,
+      "skipped_files": 0,
+      "failed_files": 20,
+      "project_checks_required": 0,
+      "project_checks_completed": 0
+    },
+    "notification": {
+      "eligible_findings": 0,
+      "detailed_findings": 0,
+      "detail_limit": 3,
+      "truncated": false
+    },
+    "reason_counts": {
+      "candidate_limit_exceeded": 1,
+      "scanner_failed": 20,
+      "project_check_failed": 21
+    },
+    "reasons": [
+      {
+        "code": "candidate_limit_exceeded",
+        "stage": "candidate-select",
+        "target": "hosts/upload/uploaded.net_member.php",
+        "detail": "4 changed reviewable file(s) were not scanned because the limit is 20",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "classes/rar.php",
+        "detail": "spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "hosts/download/depfile_com.php",
+        "detail": "spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "hosts/download/depositfiles_com.php",
+        "detail": "spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "hosts/download/fileboom_me.php",
+        "detail": "spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "hosts/download/keep2share_cc.php",
+        "detail": "spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "hosts/download/hitfile_net.php",
+        "detail": "spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "hosts/download/letitbit_net.php",
+        "detail": "spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "hosts/download/nitroflare_com.php",
+        "detail": "spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "hosts/download/turbobit_net.php",
+        "detail": "spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "hosts/download/uploaded_net.php",
+        "detail": "spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "hosts/download/GenericXFS_DL.php",
+        "detail": "spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "hosts/download/mega_co_nz.php",
+        "detail": "spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "hosts/download/rapidgator_net.php",
+        "detail": "spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "hosts/download/youtube_com.php",
+        "detail": "spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "hosts/upload/fshare.vn_member.php",
+        "detail": "spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "hosts/upload/keep2share.cc_member.php",
+        "detail": "spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "hosts/upload/depositfiles.com_member.php",
+        "detail": "spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "hosts/upload/mega.co.nz_member.php",
+        "detail": "spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "hosts/upload/filejoker.net_member.php",
+        "detail": "spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "hosts/upload/letitbit.net_member.php",
+        "detail": "spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "candidate-select",
+        "target": "hosts/upload/uploaded.net_member.php",
+        "detail": "candidate_limit_exceeded: 4 changed reviewable file(s) were not scanned because the limit is 20",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "classes/rar.php",
+        "detail": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "hosts/download/depfile_com.php",
+        "detail": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "hosts/download/depositfiles_com.php",
+        "detail": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "hosts/download/fileboom_me.php",
+        "detail": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "hosts/download/keep2share_cc.php",
+        "detail": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "hosts/download/hitfile_net.php",
+        "detail": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "hosts/download/letitbit_net.php",
+        "detail": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "hosts/download/nitroflare_com.php",
+        "detail": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "hosts/download/turbobit_net.php",
+        "detail": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "hosts/download/uploaded_net.php",
+        "detail": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "hosts/download/GenericXFS_DL.php",
+        "detail": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "hosts/download/mega_co_nz.php",
+        "detail": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "hosts/download/rapidgator_net.php",
+        "detail": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "hosts/download/youtube_com.php",
+        "detail": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "hosts/upload/fshare.vn_member.php",
+        "detail": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "hosts/upload/keep2share.cc_member.php",
+        "detail": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "hosts/upload/depositfiles.com_member.php",
+        "detail": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "hosts/upload/mega.co.nz_member.php",
+        "detail": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "hosts/upload/filejoker.net_member.php",
+        "detail": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "hosts/upload/letitbit.net_member.php",
+        "detail": "scanner_failed: spawnSync G:\\nodejs\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      }
+    ],
+    "reasons_truncated": false
+  },
+  "generated_at": "2026-09-06T05:56:18.693Z",
+  "session_id": "sess_93bc00a7-2160-4458-b611-a5a9427c7160",
+  "target": ".",
+  "revision": "28bfdc5d3d6cb43f145955c5bacde24b9d0caed8",
+  "rules_version": "unavailable",
+  "diff_hash": "26c415219b93616022b3d5a9b1db89362f0382191107291b0ba6869bf3cf39a8",
+  "diff": {
+    "algorithm": "sha256",
+    "changed_file_count": 20,
+    "changed_files": [
+      {
+        "file": "classes/rar.php",
+        "ranges": [
+          {
+            "start": 204,
+            "end": 204
+          }
+        ],
+        "before_hash": "38883a8b46483b6e76f21caf21973cf1e2c740a85a9f969e1d1df5180371fbdd",
+        "after_hash": "eac9afd227965c0f5312cd78afa440ec9aa19c7335590f9e90e5a73ad1ed0034"
+      },
+      {
+        "file": "hosts/download/depfile_com.php",
+        "ranges": [
+          {
+            "start": 197,
+            "end": 197
+          },
+          {
+            "start": 231,
+            "end": 231
+          }
+        ],
+        "before_hash": "f8f6589e03857e3cb522221d92d21b2e233b1825a5a37ead4ff9e9ee99cb5165",
+        "after_hash": "1589f962e1b09e43151f58f9dacb896c978b19254e1e8a121534006fef0c9d7e"
+      },
+      {
+        "file": "hosts/download/depositfiles_com.php",
+        "ranges": [
+          {
+            "start": 349,
+            "end": 349
+          },
+          {
+            "start": 376,
+            "end": 376
+          }
+        ],
+        "before_hash": "b19f170abecec541ad6bb1f1c74e7ce7990b735945773351831e3ad19407fe41",
+        "after_hash": "717329b5d6b287127c1cc7fa6f6cee41185146915b6cb9144326bdf13d6241bc"
+      },
+      {
+        "file": "hosts/download/fileboom_me.php",
+        "ranges": [
+          {
+            "start": 272,
+            "end": 272
+          },
+          {
+            "start": 299,
+            "end": 299
+          }
+        ],
+        "before_hash": "99982c1c6258fef2fcd959145dd08203a6e8e37b6492766b1ebc592cd91636c8",
+        "after_hash": "fcea80c7e117cc7987fc4ead7e2807f60ccef305f180984a04319e0867223278"
+      },
+      {
+        "file": "hosts/download/GenericXFS_DL.php",
+        "ranges": [
+          {
+            "start": 432,
+            "end": 432
+          },
+          {
+            "start": 453,
+            "end": 453
+          }
+        ],
+        "before_hash": "d62d16235b9786ce1891e13ea9202355f60ed7ca832955a652b867a32e1c0323",
+        "after_hash": "0bea2cc713402840e0698826b4cefd921f8519f53c79ca04c9904ffb701f8463"
+      },
+      {
+        "file": "hosts/download/hitfile_net.php",
+        "ranges": [
+          {
+            "start": 262,
+            "end": 262
+          },
+          {
+            "start": 289,
+            "end": 289
+          }
+        ],
+        "before_hash": "139580f579facdb53ae9e93e45be1f6cf3b639fc99f4970e4c8c4deb66ca5ab1",
+        "after_hash": "0bd4d6bc8298aa5e11fbc8d563876e60951ac16ea15ce7659363337beed94c68"
+      },
+      {
+        "file": "hosts/download/keep2share_cc.php",
+        "ranges": [
+          {
+            "start": 275,
+            "end": 275
+          },
+          {
+            "start": 303,
+            "end": 303
+          }
+        ],
+        "before_hash": "88c9d93b42d6087ebc7c35c41167785dca1e1f780187d71202dc47699d052b3f",
+        "after_hash": "58fbaf2215c6cf95d5f3e4b0a46fb817f64387cdcbb911e5a05cbbf0a0797ba3"
+      },
+      {
+        "file": "hosts/download/letitbit_net.php",
+        "ranges": [
+          {
+            "start": 167,
+            "end": 167
+          },
+          {
+            "start": 195,
+            "end": 195
+          }
+        ],
+        "before_hash": "12d573d61813f9cc0f4e9003c7b70f2176b155169907ea188e7bac638242c49d",
+        "after_hash": "2d5074cd0bc9bf94847fb4137e7d88f26081f83015126f5afb689d313ded10f8"
+      },
+      {
+        "file": "hosts/download/mega_co_nz.php",
+        "ranges": [
+          {
+            "start": 392,
+            "end": 392
+          },
+          {
+            "start": 424,
+            "end": 424
+          }
+        ],
+        "before_hash": "f4a6cd01faa1f2a657d9aa9aca8d14ebfb87c06c037f15606b31ae98ab53c9c6",
+        "after_hash": "b199c7916ddff306449b8df369c2e95dec12d410c0df06730481710dc7cc02a7"
+      },
+      {
+        "file": "hosts/download/nitroflare_com.php",
+        "ranges": [
+          {
+            "start": 185,
+            "end": 185
+          },
+          {
+            "start": 212,
+            "end": 212
+          }
+        ],
+        "before_hash": "b72c875c3a94ad62a21c18f7673676403f7a18eaef3324c54efa9ea42eab3c84",
+        "after_hash": "308d6539911ae425a04aeef916bee34b1196ef1c997786fb0e48c9ed67b36d09"
+      },
+      {
+        "file": "hosts/download/rapidgator_net.php",
+        "ranges": [
+          {
+            "start": 224,
+            "end": 224
+          },
+          {
+            "start": 260,
+            "end": 260
+          }
+        ],
+        "before_hash": "e1506438bb8152e90bdd4992bbe81cf7681db4c6dfed2d4a264a1a5a83c9da44",
+        "after_hash": "8d1af3f21eef28d97fdde2bc5f9cd24586944cb7ea6b4bcfb8d65fd0514794e4"
+      },
+      {
+        "file": "hosts/download/turbobit_net.php",
+        "ranges": [
+          {
+            "start": 105,
+            "end": 105
+          },
+          {
+            "start": 132,
+            "end": 132
+          }
+        ],
+        "before_hash": "e1b1ef8091626a425a2fbb1fc8e99096983da6c212c0bfb604fe9e35e5e653a5",
+        "after_hash": "b77b505576148870ecb46e85d380d2634ba0044bb796464454a31dee92a2a7b0"
+      },
+      {
+        "file": "hosts/download/uploaded_net.php",
+        "ranges": [
+          {
+            "start": 158,
+            "end": 158
+          },
+          {
+            "start": 195,
+            "end": 195
+          }
+        ],
+        "before_hash": "84373433e2c79cfcc33e725a09725fe8800d6c2ac194ef87763636198196cbea",
+        "after_hash": "cbf510c21a80e455e0e31eab07f9a462fad1eb0ff9c7da188819c7df979305ce"
+      },
+      {
+        "file": "hosts/download/youtube_com.php",
+        "ranges": [
+          {
+            "start": 102,
+            "end": 102
+          },
+          {
+            "start": 276,
+            "end": 276
+          }
+        ],
+        "before_hash": "4a95c20cd1104076ad978d8e2fd09a59fd43a6948d72e7471accec3d0f1cf344",
+        "after_hash": "08c81120c19eba7b4895945684d70bc03d62e0e0b4dab3cf44b10209556d93f2"
+      },
+      {
+        "file": "hosts/upload/depositfiles.com_member.php",
+        "ranges": [
+          {
+            "start": 204,
+            "end": 204
+          },
+          {
+            "start": 230,
+            "end": 230
+          }
+        ],
+        "before_hash": "5b1e9d21c7499224352305f67c3700ff01d327ccdcd6786710efe0b6bbfe0752",
+        "after_hash": "ceffae3c7624327cc3cfc69db6a7ba5f6afa715e2addaf1e5a835fc8c5222603"
+      },
+      {
+        "file": "hosts/upload/filejoker.net_member.php",
+        "ranges": [
+          {
+            "start": 220,
+            "end": 220
+          },
+          {
+            "start": 249,
+            "end": 249
+          }
+        ],
+        "before_hash": "43ec74f55d8e036c1c4aaa16afa3651c8d92db22c7f085922115a6b877d489c3",
+        "after_hash": "b477a6d658b8a77f69df547739450dbc17a3cd3eccbc00c5f52586895352741d"
+      },
+      {
+        "file": "hosts/upload/fshare.vn_member.php",
+        "ranges": [
+          {
+            "start": 186,
+            "end": 186
+          },
+          {
+            "start": 214,
+            "end": 214
+          }
+        ],
+        "before_hash": "a71ca51bce806140678d8ba41923a4a43bd9f339465ce12fdc5cdef05a364421",
+        "after_hash": "a47e2b15a8622852801cf98f68bb046f4af5c03f90913592e14a549f8d194f3d"
+      },
+      {
+        "file": "hosts/upload/keep2share.cc_member.php",
+        "ranges": [
+          {
+            "start": 223,
+            "end": 223
+          },
+          {
+            "start": 262,
+            "end": 262
+          }
+        ],
+        "before_hash": "31e93c7d7a6651f1db5ab2d1f1b6a55d77d93ae5e96e680b378d50752a240150",
+        "after_hash": "3d68f268304be157623ca639225e9e9159addb0262adcfe6f6cf81aa6035445d"
+      },
+      {
+        "file": "hosts/upload/letitbit.net_member.php",
+        "ranges": [
+          {
+            "start": 141,
+            "end": 141
+          },
+          {
+            "start": 169,
+            "end": 169
+          }
+        ],
+        "before_hash": "fa7e1128cd1fee4f8b88979570b76da0a65c74f937ba3341c743d3d54b92264e",
+        "after_hash": "32dde6b3af79a2e972c570c417d98ac0e26b89c104172b01a48a98dc364a74c1"
+      },
+      {
+        "file": "hosts/upload/mega.co.nz_member.php",
+        "ranges": [
+          {
+            "start": 486,
+            "end": 486
+          },
+          {
+            "start": 539,
+            "end": 539
+          }
+        ],
+        "before_hash": "b75592029dff33f40c4d4fb87497f5e29a71d16870d0502398943149f4d61b6f",
+        "after_hash": "7568fd8a322abe951cccd5588caacb024a90c884463c8ddb7559de7b3e8c7e4c"
+      }
+    ]
+  },
+  "timing": {
+    "started_at": "2026-09-06T05:56:15.714Z",
+    "completed_at": "2026-09-06T05:56:18.693Z",
+    "duration_ms": 2979,
+    "measurement": "hook_wall_clock"
+  },
+  "tokens": {
+    "input": 0,
+    "output": 0,
+    "total": 0,
+    "model_calls": 0,
+    "measurement": "known-zero"
+  },
+  "telemetry": {
+    "schemaVersion": "mimosa-gate-telemetry/v1",
+    "profile": "gate",
+    "operation": "Stop",
+    "outcome": "partial/INCONCLUSIVE",
+    "latencyMs": 2979,
+    "peakMemoryBytes": 88780800,
+    "memoryMeasurement": "max-observed-process-rss",
+    "scannedFiles": 0,
+    "cache": {
+      "hits": 0,
+      "misses": 0,
+      "measurement": "not-applicable"
+    },
+    "denyCount": 0,
+    "tokens": {
+      "input": 0,
+      "output": 0,
+      "total": 0,
+      "modelCalls": 0,
+      "measurement": "known-zero"
+    }
+  },
+  "finding_count": 0,
+  "rewake_finding_count": 0,
+  "evidence_boundary": {
+    "scan": "candidate",
+    "static_fix_verification": "observed_static_only",
+    "runtime_verification": "not_performed"
+  },
+  "finding_events": [],
+  "findings": [],
+  "artifacts": {
+    "immutable_report": ".mimosa/reports/task-review-sess_93bc00a7-2160-4458-b611-a5a9427c7160-20260906T055618693Z-5428-ada8b691e4d4.json",
+    "latest_report": ".mimosa/reports/task-review-sess_93bc00a7-2160-4458-b611-a5a9427c7160.json",
+    "history_summary": ".mimosa/history/run-20260906T055618693Z-5428-ada8b691e4d4.json"
+  }
+}
