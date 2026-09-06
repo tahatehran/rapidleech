@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/tahatehran/rapidleech/commits/master"><img src="https://img.shields.io/github/last-commit/tahatehran/rapidleech?label=last%20update&style=flat-square" alt="Last commit" /></a>
+  <a href="https://github.com/tahatehran/rapidleech/commits/main"><img src="https://img.shields.io/github/last-commit/tahatehran/rapidleech?label=last%20update&style=flat-square" alt="Last commit" /></a>
   <a href="https://rapidleech.com/forum/"><img src="https://img.shields.io/badge/Support%20Forum-Click%20Here-blue?style=flat-square" alt="Support Forum" /></a>
   <img src="https://img.shields.io/badge/plugins-127%2B-informational?style=flat-square" alt="Plugins" />
   <img src="https://img.shields.io/badge/database-none-success?style=flat-square" alt="No database" />
