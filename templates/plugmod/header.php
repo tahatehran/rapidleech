@@ -16,7 +16,7 @@
 <title><?php
 if (!isset($nn)) $nn = "\r\n";
 if (!isset($page_title)) {
-	echo 'Rapidleech v2 rev. '.$GLOBALS['rev_num'];
+	echo 'Rapidleech v'.$GLOBALS['rl_version'];
 } else {
 	echo htmlspecialchars($page_title);
 }
@@ -59,6 +59,6 @@ if ($GLOBALS['options']['flist_sort']) { echo '<script type="text/javascript" sr
 		</div>
 	</div>
 	<div class="rl-topbar-meta">
-		<b>v2</b> rev. <?php echo $GLOBALS['rev_num']; ?>
+		<b>v<?php echo $GLOBALS['rl_version']; ?></b> <?php echo $GLOBALS['dev_name']; ?>
 	</div>
 </header>

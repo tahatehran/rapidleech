@@ -1,0 +1,18 @@
+# === IDE / editor ===
+.idea/
+.vscode/
+*.iml
+
+# === Local audit/tool output (never belongs in the repo) ===
+.mimosa/
+
+# === Runtime-generated config (created by setup wizard on first run) ===
+configs/config.php
+
+# === Downloaded files / runtime data ===
+files/*
+!files/.htaccess
+
+# === Optional local caches ===
+cache/
+tmp/

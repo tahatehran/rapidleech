@@ -10,7 +10,7 @@
 <title><?php
 if (!isset($nn)) $nn = "\r\n";
 if (!isset($page_title)) {
-	echo 'Rapidleech v2 rev. '.$GLOBALS['rev_num'];
+	echo 'Rapidleech v'.$GLOBALS['rl_version'];
 } else {
 	echo htmlspecialchars($page_title);
 }

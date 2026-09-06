@@ -1,0 +1,104 @@
+name: Tag & Release
+
+# Automatic tagging + automatic GitHub Release.
+# The version is read from $rl_version in rl_init.php (e.g. '26.0.0').
+# Bump the version, push to the default branch, and this workflow will
+# create the vX.Y.Z tag and publish a release with a ready-to-upload zip.
+
+on:
+  push:
+    branches:
+      - bev/2025
+      - main
+    paths-ignore:
+      - '**.md'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to release (e.g. 26.0.1). Leave empty to read from rl_init.php'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tag-release
+  cancel-in-progress: false
+
+jobs:
+  tag-and-release:
+    name: Tag & Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (full history)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Determine version
+        id: version
+        run: |
+          set -euo pipefail
+          if [ -n "${{ github.event.inputs.version }}" ]; then
+            VERSION="${{ github.event.inputs.version }}"
+          else
+            VERSION="$(sed -n "s/^\$rl_version = '\([^']*\)';.*/\1/p" rl_init.php)"
+          fi
+          if ! echo "$VERSION" | grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+$'; then
+            echo "::error::Could not determine a valid X.Y.Z version (got: '${VERSION}'). Check \$rl_version in rl_init.php."
+            exit 1
+          fi
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "tag=v${VERSION}" >> "$GITHUB_OUTPUT"
+          echo "Releasing version: v${VERSION}"
+
+      - name: Check if tag already exists
+        id: check
+        run: |
+          set -euo pipefail
+          TAG="${{ steps.version.outputs.tag }}"
+          if [ -n "$(git ls-remote --tags origin "refs/tags/${TAG}")" ]; then
+            echo "Tag ${TAG} already exists — nothing to do."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build release notes from rev.History.txt
+        if: steps.check.outputs.skip != 'true'
+        run: |
+          set -euo pipefail
+          VERSION="${{ steps.version.outputs.version }}"
+          awk -v ver="v${VERSION}" '
+            index($0, ver " - ") == 1 { insec = 1; print; next }
+            insec && /^====/ { exit }
+            insec { print }
+          ' rev.History.txt > release-notes.md
+          if [ ! -s release-notes.md ]; then
+            echo "Release v${VERSION}" > release-notes.md
+          fi
+
+      - name: Build deployable package
+        if: steps.check.outputs.skip != 'true'
+        run: |
+          set -euo pipefail
+          VERSION="${{ steps.version.outputs.version }}"
+          zip -rq "RapidLeech-PlugMod-v${VERSION}.zip" . \
+            -x ".git/*" ".github/*" ".idea/*" ".mimosa/*" "*.zip" "release-notes.md"
+          ls -lh "RapidLeech-PlugMod-v${VERSION}.zip"
+
+      - name: Create tag and release
+        if: steps.check.outputs.skip != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.version.outputs.version }}
+          TAG: ${{ steps.version.outputs.tag }}
+        run: |
+          set -euo pipefail
+          gh release create "$TAG" \
+            --target "$GITHUB_SHA" \
+            --title "RapidLeech PlugMod v${VERSION}" \
+            --notes-file release-notes.md \
+            "RapidLeech-PlugMod-v${VERSION}.zip"
+          echo "Created tag ${TAG} and release ✅"

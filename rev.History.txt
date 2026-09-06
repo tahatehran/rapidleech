@@ -2,6 +2,21 @@ Rapidleech PlugMod (by eqbal)
 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
 
 ====================================
+v26.0.0 - Sep 06, 2026
+
+New independent versioning scheme (major.minor.patch), starting at 26.0.0.
+[CHANGE] Version display moved from "v2 rev. 43" to "v26.0.0" across rl_init.php,
+         templates/plugmod/header.php and templates/neatblue/header.php.
+[CHANGE] $dev_name set to 'Stable'; legacy $rev_num kept for plugin compatibility.
+[CHANGE] BUILD date refreshed to 06Sep2026.
+[CLEANUP] Removed .idea/ (IDE settings) and .mimosa/ (local audit tool output)
+          from the repository; .gitignore added so they never come back.
+[AUTOMATION] Added GitHub Actions workflow for automatic tagging and releases
+             (.github/workflows/release.yml).
+[DOC] README updated: independent project language, plugin badge, links.
+
+
+====================================
 Rev. 430 - Dec 31, 2014
 
 [SECURITY] Fixed XSS on file's comments.

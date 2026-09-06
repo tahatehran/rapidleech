@@ -10,9 +10,10 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/tahatehran/rapidleech/commits/main"><img src="https://img.shields.io/github/last-commit/tahatehran/rapidleech?label=last%20update&style=flat-square" alt="Last commit" /></a>
+  <a href="https://github.com/tahatehran/rapidleech/releases/latest"><img src="https://img.shields.io/github/v/release/tahatehran/rapidleech?label=version&style=flat-square" alt="Latest release" /></a>
+  <a href="https://github.com/tahatehran/rapidleech/commits/bev/2025"><img src="https://img.shields.io/github/last-commit/tahatehran/rapidleech?label=last%20update&style=flat-square" alt="Last commit" /></a>
   <a href="https://rapidleech.com/forum/"><img src="https://img.shields.io/badge/Support%20Forum-Click%20Here-blue?style=flat-square" alt="Support Forum" /></a>
-  <img src="https://img.shields.io/badge/plugins-127%2B-informational?style=flat-square" alt="Plugins" />
+  <img src="https://img.shields.io/badge/plugins-376%2B-informational?style=flat-square" alt="Plugins" />
   <img src="https://img.shields.io/badge/database-none-success?style=flat-square" alt="No database" />
 </p>
 
@@ -20,11 +21,11 @@
 
 ## 📖 About
 
-RapidLeech transfers files from other file-hosting servers **to your own server** using your server's fast connection, then lets you download them any time you want. It works with 127+ popular file-hosting sites (uploaded.net, Rapidgator.net, and many more) through its plugin system.
+RapidLeech transfers files from other file-hosting servers **to your own server** using your server's fast connection, then lets you download them any time you want. It works with 159 download hosts and 217 upload hosts (376 plugins in total — Rapidgator.net and many more) through its plugin system.
 
 The script has been used by millions of users and installed on thousands of servers worldwide. Installation is extremely easy and **does not require any database**.
 
-> This repository is a maintained fork of the official (now read-only) RapidLeech repo, kept alive so users can continue to receive updates. New maintainers are welcome — contact: `ept6f5mugkd3 [at] opayq [dot] com`
+> **This is an independent project.** It carries its own versioning (starting at **v26.0.0**) and its own release pipeline, with automatic tagging and releases via GitHub Actions. The core code originates from RapidLeech PlugMod; the original upstream repository has been read-only since 2021.
 
 ## ✨ Modern UI (new)
 
@@ -66,7 +67,8 @@ Run `checker.php` after uploading to verify your server meets everything.
 
 ## ⚡ Installation
 
-1. Upload all files to a folder on your web server (e.g. `public_html/rapidleech/`).
+1. Download the latest release package (`RapidLeech-PlugMod-vX.Y.Z.zip`) from the [Releases page](https://github.com/tahatehran/rapidleech/releases/latest) — or clone this repository.
+2. Upload all files to a folder on your web server (e.g. `public_html/rapidleech/`).
 2. Make sure these paths are writable (chmod `755` or `777` depending on your host):
    - `configs/` — configuration and `files.lst`
    - `files/` — your download storage
